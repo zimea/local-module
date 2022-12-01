@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile",
+            "command": "npm run build:watch",
+            "type": "shell",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never",
+                "focus": false
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": ["$tsc-watch"]
+        }
+    ]
+}

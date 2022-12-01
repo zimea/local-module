@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "target": "es2022" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
         "lib": ["es2022"],
         "module": "commonjs" /* Specify what module code is generated. */,
@@ -14,11 +15,20 @@
         "strict": true /* Enable all strict type-checking options. */,
         "strictNullChecks": true,
         "strictPropertyInitialization": false,
+        "types": [],
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "typeRoots": ["./node_modules/@types"],
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "downlevelIteration": true
     },
     "ts-node": { "compiler": "typescript" },
-    "include": ["./src/**/*"]
+    "include": ["./src/**/*"],
+    "exclude": [
+        "node_modules",
+        "./node_modules",
+        "./node_modules/*",
+        "./node_modules/@types/node/index.d.ts",
+        ]
 }

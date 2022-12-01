@@ -1,0 +1,16 @@
+services:
+  localmodule:
+    depends_on:
+      - dss
+    build:
+      context: .
+      dockerfile: ./src/Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 8081:8081
+
+  dss:
+    image: jkoenig134/dss:latest
+    ports:
+      - 8080:8080
